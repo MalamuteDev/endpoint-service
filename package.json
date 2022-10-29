@@ -1,8 +1,8 @@
 {
     "name": "endpoint-service-library",
-    "version": "0.0.0",
+    "version": "0.0.0-development",
     "engines": {
-        "node": ">=16.16.0 <18.0.0",
+        "node": ">=16.16.0",
         "npm": "PLEASE USER YARN",
         "yarn": ">= 1.22.4"
     },
@@ -14,7 +14,9 @@
         "test": "ng test",
         "lint": "npx eslint --fix --ext \"src/**/*.{js,jsx,ts,tsx,html}\"",
         "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json,html}' --config ./.prettierrc.json",
-        "postinstall": "husky install"
+        "postinstall": "husky install",
+        "build:lib": "ng-packagr -p projects/endpoint-service/ng-package.json",
+        "semantic-release": "semantic-release"
     },
     "private": true,
     "dependencies": {
@@ -31,11 +33,14 @@
         "zone.js": "~0.11.4"
     },
     "devDependencies": {
+        "@angular-builders/jest": "14.0.1",
+        "@angular-devkit/build-angular": "^14.2.7",
         "@angular/cli": "~14.2.7",
         "@angular/compiler-cli": "^14.2.0",
+        "@briebug/jest-schematic": "5.0.0",
         "@commitlint/cli": "^17.1.2",
         "@commitlint/config-conventional": "^17.1.0",
-        "@types/jasmine": "~4.0.0",
+        "@types/jest": "29.2.0",
         "@typescript-eslint/eslint-plugin": "^5.0.0",
         "enforce-branch-name": "^1.1.2",
         "eslint": "^8.0.1",
@@ -46,14 +51,15 @@
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-promise": "^6.0.0",
         "husky": "^8.0.1",
-        "jasmine-core": "~4.3.0",
-        "karma": "~6.4.0",
-        "karma-chrome-launcher": "~3.1.0",
-        "karma-coverage": "~2.2.0",
-        "karma-jasmine": "~5.1.0",
-        "karma-jasmine-html-reporter": "~2.0.0",
+        "jest": "28.1.3",
         "lint-staged": "^13.0.3",
+        "ng-packagr": "^14.2.2",
         "prettier": "^2.7.1",
+        "semantic-release": "^19.0.5",
         "typescript": "*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MalamuteDev/endpoint-service-Library.git"
     }
 }
