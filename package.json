@@ -1,6 +1,11 @@
 {
     "name": "endpoint-service-library",
     "version": "0.0.0",
+    "engines": {
+        "node": ">=16.16.0 <18.0.0",
+        "npm": "PLEASE USER YARN",
+        "yarn": ">= 1.22.4"
+    },
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
